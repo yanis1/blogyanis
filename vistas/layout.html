@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<!--cambio IMPORTANTE -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Blog</title>
+		<link rel="stylesheet" href="css/normalize.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/principal.css"/>	
+		<link rel="stylesheet" href="css/tabletas.css" media="screen and (max:840px)"/>	
+	</head>
+	<body>
+		<!--
+		todo lo que sea un encabezado
+		va dentro de una etiqueta head
+		-->
+		<header>
+			<h1>{% block titulo %}{% endblock %}</h1>
+			<nav>
+				<ul>
+					<li>
+						Home
+					</li>
+					<li>
+						Blog
+					</li>
+					<li>
+						Contacto
+					</li>
+				</ul>
+			</nav>
+		</header>
+		{% block contenido %}
+		
+		{% endblock %}
+		<footer>
+			<div id="sociales">
+				<h2>Siguenos:</h2>
+				<img src="./imagenes/vidrio/facebook.png"/>
+				<img src="./imagenes/vidrio/twitter.png"/>
+				<img src="./imagenes/vidrio/google.png"/>
+			</div>
+			<div id="suscribir">
+				<h2>Suscribir:</h2>
+				
+				<form action="/suscribir" method="post">
+									
+				   <label for="suscribir-email">Email:</label>
+				   <input id="suscribir-email" type="text" name="email"/>
+				  
+				   
+				   <input type="submit" value="enviar" />	
+				</form>
+				
+			</div>
+		</footer>
+	</body>
+</html>

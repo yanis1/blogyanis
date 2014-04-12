@@ -1,0 +1,46 @@
+		{% extends "layout.html" %}
+		
+		{% block titulo %}
+           Inicio
+        {% endblock %}
+		
+		{% block contenido %}
+		
+		<section id="presentacion">
+			<h1>{{configuracion.saludo}}</h1>
+		</section>
+		<section id="servicios">
+			<div class="servicio">
+				<img src="./imagenes/movil.png"/>
+				<h2>Móviles</h2>
+			</div>
+			<div class="servicio">
+				<img src="./imagenes/seo.png"/>
+				<h2>SEO</h2>
+			</div>
+			<div class="servicio">
+				<img src="./imagenes/compu.png"/>
+				<h2>Diseño</h2>
+			</div>
+		</section>
+		<section id="testimonios">
+			<div class="testimonio">
+				<img src="./imagenes/testimonio.jpg"/>
+				<p>
+					Excelente producto, mi vida es
+					mejor desde entonces :)
+				</p>
+			</div>
+			<div class="testimonio">
+				<video controls loop class="flexible">
+					<source src="./videos/testimonio.webm" type="video/webm" />
+					<source src="./videos/testimonio.ogv" type="video/ogv" />
+					<source src="./videos/testimonio.mp4" type="video/mp4" />
+					Tu navegador no soporta video :(
+				</video>
+			</div>
+		</section>		
+		
+		{% endblock %}
+		
+		

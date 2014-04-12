@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head lang="es">
+		<meta charset="utf-8"/>
+		<title>JavaScript intro</title>
+		<script>
+			// esta es una declaracion con comentarios
+			/*
+			 comentario varias lineas
+			 linea 2
+			 linea 3
+			 */
+			/*
+			 var saludo = "hola a todos(otra vez)";
+			 var currentYear = 2014;
+
+			 document.write("<div>" + currentYear + "</div>");
+			 document.write(saludo);
+
+			 document.write('<h1>hola a todos</h1>');
+			 document.write("<h1>" + 5*3 + "<h1>");
+
+			 var nombre = prompt("escribe tu nombre");
+			 document.write(nombre);
+			 */
+
+			/* FORMA 1 DE DECLARAR FUNCIONES*/
+			function suma(a, b) {
+				var respuesta = a + b;
+
+				return respuesta;
+			}
+
+			/* FORMA 2 DECLARAR FUNCIONES */
+			var multi = function(a, b) {
+				var respuesta = a * b;
+
+				return respuesta;
+			};
+
+			/* FORMA 3 DECLARAR FUNCIONES */
+			function operacion(miFuncion, a, b) {
+
+				return miFuncion(a, b);
+			}
+
+			var calculo = operacion(suma, 0.1, 0.2);
+			document.write(calculo);
+
+			/*-------  SOLUCION EJERCICIO ------*/
+
+			/*
+
+			var nombre = prompt("Escribe tu nombre");
+			var domicilio = prompt("Escribe tu domicilio");
+			var telefono = prompt("Escribe tu telefono");
+
+			document.write("<div>nombre:" + nombre + "</div>");
+			document.write("<div>domicilio:" + domicilio + "</div>");
+			document.write("<div>telefono:" + telefono + "</div>");
+
+			*/
+
+			//DECLARA UN OBJETO DE JAVASCRIPT
+			var persona = {
+				nombre : "ismael",
+				edad : 27,
+				saludar : function() {					
+					document.write("hola a todos! soy:" + this.nombre);
+				}
+			};
+			
+			persona.curso = "html5";
+
+			document.write(persona.nombre);
+			persona.saludar();
+
+		</script>
+	</head>
+	<body></body>
+</html>
+

@@ -1,0 +1,40 @@
+{%extends "layout.html"%}
+
+{% block titulo %}
+  Contacto
+{% endblock %}
+
+{% block contenido %}
+
+   <h2>Contactanos!!</h2>
+   <form method="post" action="/contactar" >
+
+	<h2>En que podemos ayudarte?</h2>
+	<div >	
+		<label>nombre</label>
+		<input type="text" name="nombre" required placeholder="Tu nombre aqui"/>
+	</div>
+	<div >	
+		<label>email</label>
+		<input type="email" name="email" />
+	</div>
+	<div >	
+		<label>website</label>
+		<input type="text" name="url"/>
+	</div>
+	<div >	
+		<label>edad</label>
+		<input type="range" name="edad" min="18" max="190" />
+	</div>
+	<div >	
+		<label>comentario</label>
+		<textarea name="comentario" required ></textarea>
+	</div>	
+	<div >	
+		<input type="submit" value="enviar" />
+	</div>
+
+</form>
+
+
+{% endblock %}
